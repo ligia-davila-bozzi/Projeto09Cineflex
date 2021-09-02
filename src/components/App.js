@@ -4,6 +4,7 @@ import "./css/style.css";
 import Header from "./header/Header";
 import Home from "./home/Home";
 import MovieSession from "./movieSession/MovieSession";
+import Seat from "./seat/Seat";
 
 const App = () => {
     return (
@@ -11,7 +12,7 @@ const App = () => {
             <Header />
             {/*<Home />*/}
             {/*<MovieSession />*/}
-            
+            {/*<Seat />*/}
         </>
 
     );
