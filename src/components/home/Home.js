@@ -1,24 +1,31 @@
-//import {Link} from "react-router-dom"
-//import MovieSession from "../movieSession/MovieSession.js"
-import PageTitle from '../others/pageTitle'
+import { useState, useEffect } from 'react';
+import PageTitle from '../others/pageTitle';
+import Movie from './Movie';
+import { getMovies } from '../others/Axios';
 
-const Home = () => {
+export default function Home () {
+    const [movies, setMovies] = useState([]);
+
+    useEffect(() => {
+        getMovies().then((movies) => {
+            setMovies(movies);
+        })
+    },[])
+    let i = 0;
+    console.log (movies.data);
+    if (movies.length === 0){
+        return (
+            <h1>/carregando, menor</h1>
+        );
+    }
+
     return (
         <main>
             <PageTitle title="Selecione o filme" />
 
             <div className="container-movies">
-                {movies.map((movie) => 
-                <Movie key={movie.id} movie={movie} />
-                )}
-                <div className="movie">
-                    <img src="https://br.web.img3.acsta.net/pictures/19/04/03/18/23/2539612.jpg" alt="gsjds" />
-                </div>
-                <div className="movie"></div>
-                <div className="movie"></div>
+                {movies.data.map((movie) => <Movie key={movie.id} movie={movie} />)}
             </div>
         </main>
     );
 }
-
-export default Home;
