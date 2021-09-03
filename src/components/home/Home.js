@@ -11,8 +11,6 @@ export default function Home () {
             setMovies(movies);
         })
     },[])
-    let i = 0;
-    console.log (movies.data);
     if (movies.length === 0){
         return (
             <h1>/carregando, menor</h1>

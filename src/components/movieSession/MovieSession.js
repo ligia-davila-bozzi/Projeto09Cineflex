@@ -1,7 +1,17 @@
 import PageTitle from "../others/pageTitle.js";
 import Footer from "../others/Footer.js";
+import { useParams, useState } from "react-router-dom";
+import { getSessions } from '../others/Axios';
 
 export default function MovieSession() {
+    const [sessions, setSessions] = useState({});
+    const params = useParams();
+    useEffect(() => {
+        getSessions(params).then((sessions) => {
+            setSessions(sessions);
+        });
+    },[])
+
     return (
         <main>
             <PageTitle title="Selecione o horário" />
