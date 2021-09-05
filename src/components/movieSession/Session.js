@@ -1,26 +1,26 @@
-const Session = (props) => {
-    const { days } = props;
+import Hours from "./Hours";
+const Session = ({ sessions }) => {
+    const { days } = sessions;
+    console.log(days)
     return (
         <>
-            {days.map((day)=>{
+            {days.map((day) => {
                 const {
                     id,
                     weekday,
                     date,
                     showtimes
                 } = day;
-                return ();
+                console.log(showtimes)
+                return (
+                    <div key = {id} className="session">
+                        <h1>{`${weekday} - ${date}`}</h1>
+                        <Hours hours={showtimes} />
+                    </div>
+                );
             })}
         </>
     );
-};
+}
 
 export default Session;
-
-
-<div className="session">
-    <h1>{`{weekday} - {dd/mm/aaaa}`}</h1>
-    <div className="hours">
-        <div className="hour">{"hour"}</div>
-    </div>
-</div>
