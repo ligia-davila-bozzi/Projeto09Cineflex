@@ -9,13 +9,27 @@ const Seat = (props) => {
         reserved
     } = props;
 
-    function selecionar(type) {
+    const clientData = {
+        id:[],
+        name:"",
+        cpf: ""
+    }
+
+    const {id, name:nome, cpf} = clientData
+
+    function selecionar(seat) {
         if (select === "") {
             setSelect("selected");
+            purchase (seat);
 
         } else {
             setSelect("");
         }
+    }
+
+    function purchase (seat){
+        id.push(seat);
+        console.log(id)
     }
 
     if(reserved === false) {
@@ -24,7 +38,7 @@ const Seat = (props) => {
         )
     } else {
     return(
-        <div className={`seat ${select}`} onClick={selecionar}>{name}</div>
+        <div className={`seat ${select}`} onClick={()=>selecionar(name)}>{name}</div>
     );}
 }
 

@@ -15,10 +15,12 @@ export default function Room() {
         });
     }, [])
 
-    console.log(room);
     const { day, movie, name, seats } = room
     const { title, posterURL, overview } = movie;
-    console.log(overview);
+
+    
+
+
     return (
         <main className="mar-bottom">
             <PageTitle title="Selecione o(s) assento(s)" />
@@ -39,7 +41,7 @@ export default function Room() {
                 </div>
                 <Input />
 
-                <Link className = "link" to="">
+                <Link className = "link" to="/sucesso">
                 <div className="botao">Reservar assento(s)</div>
                 </Link>
             </div>

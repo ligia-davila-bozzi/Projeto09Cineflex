@@ -21,7 +21,7 @@ const App = () => {
                 <Route path="/session/:idSession" exact>
                     <Room />
                 </Route>
-                <Route path="/" exact>
+                <Route path="/sucesso" exact>
                     <Success />
                 </Route>
             </Switch>
