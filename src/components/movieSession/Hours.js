@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 const Hours = ({hours}) => {
-    console.log(hours)
 
     return (
         <div className="hours">

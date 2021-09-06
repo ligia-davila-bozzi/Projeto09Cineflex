@@ -32,24 +32,3 @@ export default function MovieSession() {
         </main>
     );
 }
-
-/*
-ImgMovie = {ImgMovie} NameMovie = {NameMovie} Weekday={Weekday} hour={hour}
-*/
-
-
-/*
--------
-esse é o sessions2 
-tam 0
-esse é o sessions vazio
-tô aqui
--------
-esse é o sessions2 [object Object]
-tam undefined
-
-
-
-Session.js:4 esse é o days:
-Session.js:4 esse é o days:
-*/

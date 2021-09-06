@@ -11,12 +11,12 @@ function getSessions(id) {
     return axios.get(`${URL}/movies/${id}/showtimes`);
 }
 
-function getSeats(id) {
+function getRooms(id) {
     return axios.get(`${URL}/showtimes/${id}/seats`);
 }
 
 export {
     getMovies,
     getSessions,
-    getSeats
+    getRooms
 }
