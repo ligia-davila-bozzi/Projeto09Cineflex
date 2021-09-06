@@ -27,17 +27,3 @@ export default function Home () {
         </main>
     );
 }
-
-
-
-/*
--------
-esse é o movies2 
-tam 0
-esse é o movies vazio
-tô aqui
--------
-esse é o movies2 [object Object]
-tam undefined
-esse é o movies [object Object]
-*/
