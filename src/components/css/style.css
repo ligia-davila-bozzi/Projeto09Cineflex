@@ -156,8 +156,9 @@ footer {
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    background-color: #C3CFD9;
     display: flex;
+    background-color: #C3CFD9;
+    border: 1px solid #777d83;
     justify-content: center;
     align-items: center;
     margin: 0px 0px 8px 0px;
@@ -167,11 +168,6 @@ footer {
 .selected {
     background-color: #8DD7CF;
     border: 1px solid #489189;
-}
-
-.available {
-    background-color: #C3CFD9;
-    border: 1px solid #777d83;
 }
 
 .unavailable {

@@ -4,10 +4,10 @@ import Input from "./Input";
 import Seat from "./Seat";
 import { getRooms } from "../others/Axios";
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 export default function Room() {
-    const [room, setRoom] = useState([]);
+    const [room, setRoom] = useState({day:{}, movie:{}, name:"", seats:[]});
     const params = useParams().idSession;
     useEffect(() => {
         getRooms(params).then((room) => {
@@ -39,7 +39,9 @@ export default function Room() {
                 </div>
                 <Input />
 
+                <Link className = "link" to="">
                 <div className="botao">Reservar assento(s)</div>
+                </Link>
             </div>
             <Footer
                 ImgMovie={posterURL}

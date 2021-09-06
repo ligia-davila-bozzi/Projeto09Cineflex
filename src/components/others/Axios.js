@@ -1,7 +1,6 @@
 import axios from 'axios';
 
-const URL = "https://mock-api.bootcamp.respondeai.com.br/api/v2/cineflex"
-//"https://movie.free.beeceptor.com"; //"https://mock-api.bootcamp.respondeai.com.br/api/v3/cineflex"
+const URL = "https://movie.free.beeceptor.com"; //"https://mock-api.bootcamp.respondeai.com.br/api/v3/cineflex"
 
 function getMovies() {
     return axios.get(`${URL}/movies`);
