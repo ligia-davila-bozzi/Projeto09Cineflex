@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 const Hours = ({hours}) => {
     console.log(hours)
 
@@ -9,7 +10,9 @@ const Hours = ({hours}) => {
                     id
                 } = hour;
                 return(
-                    <div key={id} className="hour">{name}</div>
+                    <Link className = "link" to={`/session/${id}`}>
+                        <div className="hour">{name}</div>
+                    </Link>
                 );
             })}
         </div>

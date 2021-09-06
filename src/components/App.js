@@ -4,8 +4,8 @@ import "./css/style.css";
 import Header from "./header/Header";
 import Home from "./home/Home";
 import MovieSession from "./movieSession/MovieSession";
-import Seat from "./seat/Seat";
-//import Sucess from "./sucess/Sucess";
+import Room from "./room/Room";
+import Success from "./success/Success";
 
 const App = () => {
     return (
@@ -19,14 +19,18 @@ const App = () => {
                     <MovieSession />
                 </Route>
                 <Route path="/session/:idSession" exact>
-                    <Seat />
+                    <Room />
                 </Route>
-                {/* <Route path="/" exact>
-                    <Sucess />
-                </Route> */}
+                <Route path="/" exact>
+                    <Success />
+                </Route>
             </Switch>
         </BrowserRouter>
     );
 };
 
 export default App;
+
+/*
+
+*/
